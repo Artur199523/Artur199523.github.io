@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <DefaultLayout partOfFooterShow = {true}>
-            <MainHero/>
+            {/* <MainHero/> */}
             <HomeHowDesktop/>
             <HomeHowMobile/>
             <GameMode/>
