@@ -1,0 +1,165 @@
+@import "../../../../scss/color";
+
+.blog-detail {
+  padding: 160px 0 100px 0;
+  @media screen and (max-width: 991px) {
+    padding: 100px 0 60px 0;
+  }
+  .bd-wrap {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .date {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #787882;
+    text-transform: uppercase;
+  }
+  .author {
+    font-size: 16px;
+    color: #787882;
+    margin: 0 0 15px 0;
+    .name {
+      color: #fff;
+      font-size:16px;
+    }
+    span {
+      font-size: 13px;
+      color: #787882;
+    }
+    em {
+      display: inline-block;
+      font-style: normal;
+      margin: 0 5px;
+    }
+  }
+  h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin: 0 0 40px 0;
+    position: relative;
+    @media screen and (max-width: 991px) {
+      font-size: 32px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      width: 88px;
+      height: 4px;
+      background-color: $brand-color;
+      transition: all ease 0.3s;
+      transform: skewX(-45deg);
+      @media screen and (max-width: 991px) {
+        left: 0;
+        width: 44px;
+        height: 2px;
+        bottom: -8px;
+      }
+    }
+  }
+  .share {
+    margin: 0 0 50px 0;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 991px) {
+      margin: 0 0 20px 0;
+    }
+    .facebook {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px 0 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../../../../assets/svg/fb.svg);
+    }
+    .twitter {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px 0 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../../../../assets/svg/tw.svg);
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 13px;
+      span {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px 0 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(../../../../assets/svg/share.svg);
+      }
+    }
+  }
+  .thumb {
+    margin: 0 0 20px 0;
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    margin: 0 0 30px 0;
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      color: #fff;
+      margin: 0 0 30px 0;
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+        margin: 0 0 15px 0;
+      }
+    }
+    a{
+      color:$brand-color
+    }
+  }
+  .p-share{
+    display: flex;
+    height: 37px;
+    margin-bottom: 20px;
+  }
+  .p-facebook {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../../../../assets/svg/fb.svg);
+  }
+  .p-twitter{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../../../../assets/svg/tw.svg);
+  }
+  .reddit {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../../../../assets/png/reddit.png);
+  }
+  .telegram{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../../../../assets/png/telegram.png);
+  }
+}

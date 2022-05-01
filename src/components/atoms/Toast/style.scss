@@ -1,0 +1,66 @@
+@import "src/scss/color";
+@keyframes fadein {
+  0% {
+    bottom: -68px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: -68px;
+    opacity: 0;
+    visibility: hidden !important;
+  }
+}
+.snackbar {
+  visibility: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  z-index: 9999999;
+  height: 56px;
+  animation: fadeOut 1s forwards;
+  @media screen and (max-width: 768px) {
+    padding: 10px 24px;
+    height: 44px;
+  }
+  &_status {
+    display: flex;
+    &_symbol {
+      width: 20px;
+    }
+    &_message {
+      font-size: 12px;
+      padding: 6px 0 6px 8px;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.show {
+  visibility: visible;
+  animation: fadein 0.5s;
+}
+.close{
+  animation:fadeOut 0.5s;
+}
+.success {
+  background: linear-gradient(270deg, #00A27D 0%, #187560 100%);
+}
+.error {
+  background: linear-gradient(270deg, #C4423F 0%, #6F222B 100%);
+}

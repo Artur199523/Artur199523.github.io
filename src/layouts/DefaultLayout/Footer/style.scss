@@ -1,0 +1,301 @@
+@import "src/scss/color";
+
+.footer {
+  padding: 60px 0;
+  @media screen and (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      text-align: left;
+      margin: 0 30px;
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 20px 0;
+      }
+
+      img {
+        height: 48px;
+        width: auto;
+      }
+    }
+
+    .menu-footer {
+      min-width: 180px;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @media screen and (max-width: 991px) {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        li {
+          display: inline-block;
+          margin: 0 25px;
+
+          a {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $brand-color;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .allright {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 24px 0 32px 0;
+    font-size: 10px;
+
+    p {
+      margin: 0;
+      color: #787882;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 15px 0 20px 0;
+      font-size: 8px;
+      max-width: 196px;
+    }
+  }
+
+  .menu-footer-second {
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        margin: 0 25px;
+
+        a {
+          display: block;
+          font-size: 8px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #fff;
+
+          &:hover {
+            opacity: 0.8;
+            color: $brand-color;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-footer-mobile {
+    display: none;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      display: block;
+      padding: 20px 0 0 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        margin: 0 25px 20px 25px;
+
+        a {
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $brand-color;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  background-color: #000;
+  background-image: none;
+  padding-bottom: 50px;
+
+  &__bg {
+    width: 100%;
+  }
+
+  .wrap-bg {
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    padding-top: 70px;
+    @media screen and (max-width: 991px) {
+      padding-top: 40px;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    position: relative;
+    margin: 0 auto 60px auto;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+      margin: 0 auto 34px auto;
+    }
+
+    span {
+      color: $brand-color;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      width: 88px;
+      height: 4px;
+      background-color: $brand-color;
+      transition: all ease 0.3s;
+      transform: skewX(-45deg);
+      margin: 0 0 0 -44px;
+      @media screen and (max-width: 991px) {
+        left: 50%;
+        margin: 0 0 0 -22px;
+        width: 44px;
+        height: 2px;
+        bottom: -8px;
+      }
+    }
+  }
+
+  .social {
+    text-align: center;
+    margin-bottom: 15px;
+
+    a {
+      display: inline-block;
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(315.38deg, #865716 32.22%, #b38a3b 79.86%);
+      margin: 0 10px;
+      clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+      transition: all ease 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      transition: all ease 0.3s;
+
+      &:hover {
+        background: linear-gradient(315.38deg, #b38a3b 32.22%, #b38a3b 79.86%);
+      }
+
+      @media screen and (max-width: 991px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        display: block;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media screen and (max-width: 991px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &.telegram {
+        span {
+          background-image: url(../../../assets/svg/telegram.svg);
+          background-size: 40px auto;
+          @media screen and (max-width: 991px) {
+            background-size: 20px auto;
+          }
+        }
+      }
+
+      &.twitter {
+        span {
+          background-image: url(../../../assets/svg/twitter.svg);
+          background-size: 40px auto;
+          @media screen and (max-width: 991px) {
+            background-size: 20px auto;
+          }
+        }
+      }
+
+      &.facebook {
+        span {
+          background-image: url(../../../assets/svg/facebook.svg);
+          background-size: 40px auto;
+          @media screen and (max-width: 991px) {
+            background-size: 20px auto;
+          }
+        }
+      }
+
+      &.youtube {
+        span {
+          background-image: url(../../../assets/svg/youtube.svg);
+          background-size: 40px auto;
+          @media screen and (max-width: 991px) {
+            background-size: 20px auto;
+          }
+        }
+      }
+
+      &.tictok {
+        span {
+          background-image: url(../../../assets/svg/tictok.svg);
+          background-size: 40px auto;
+          @media screen and (max-width: 991px) {
+            background-size: 20px auto;
+          }
+        }
+      }
+    }
+  }
+}

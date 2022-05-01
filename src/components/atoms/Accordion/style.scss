@@ -1,0 +1,122 @@
+@import "src/scss/color";
+
+@keyframes openAccordion {
+  0%{height: 0}
+  50%{height: 50%}
+  100%{height:100%}
+}
+
+.custom-accordion {
+  width: 100%;
+  margin: 8px 0;
+
+  &-item {
+
+    .custom-accordion-header {
+      height: 56px;
+      margin: 0;
+
+      .custom-accordion-button {
+        width: 100%;
+        background-color: black;
+        border: 1px solid #252525;
+        color: $white;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+        padding: 15px 14px;
+
+        span:first-child {
+          float: left;
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+
+          img {
+            margin-right: 9px;
+            width: 24px;
+            height: 22px;
+          }
+        }
+
+        span:last-child {
+          float: right;
+
+          .openIcon {
+            transform: rotateX(180deg);
+          }
+        }
+
+      }
+    }
+
+    .custom-accordion-body {
+      display: none;
+      width: 100%;
+      background-color: black;
+      margin-top: 5px;
+
+      .more {
+        display: flex;
+        overflow-x: scroll;
+        gap: 24px;
+        background-color: $brand-fifth;
+        padding: 32px ;
+
+        > div {
+          max-width: 23%;
+          min-width: 23%;
+          @media screen and (max-width: 1200px) {
+            max-width: 31%;
+            min-width: 31%;
+          }
+          @media screen and (max-width: 992px) {
+            max-width: 48%;
+            min-width: 48%;
+          }
+          @media screen and (max-width: 375px) {
+            max-width: 47%;
+            min-width: 47%;
+          }
+        }
+        @media screen and (max-width: 375px) {
+         padding: 14px;
+          gap: 19px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          background: #363636;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: black;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: gray;
+          border-radius: 100px;
+          height: 100px
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+
+        }
+      }
+    }
+  }
+}
+
+.according-open {
+  display: block !important;
+  animation: openAccordion 0.3s ease forwards;
+  overflow-y: hidden;
+}
+
+.body-border {
+  border: 1px solid #252525;
+  padding: 16px 24px;
+}

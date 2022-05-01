@@ -1,0 +1,6 @@
+<svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 1H1V23H19V1Z" stroke="#BA8926" stroke-miterlimit="10" stroke-linecap="square"/>
+    <path d="M5 7H15" stroke="#BA8926" stroke-miterlimit="10" stroke-linecap="square"/>
+    <path d="M5 12H15" stroke="#BA8926" stroke-miterlimit="10" stroke-linecap="square"/>
+    <path d="M5 17H9" stroke="#BA8926" stroke-miterlimit="10" stroke-linecap="square"/>
+</svg>

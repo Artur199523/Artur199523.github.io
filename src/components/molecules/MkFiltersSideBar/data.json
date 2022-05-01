@@ -1,0 +1,129 @@
+{
+  "status": {
+    "allItems": false
+  },
+  "price-filter": {
+    "crypto-currency":{
+      "value": null,
+      "options": [
+        {"value": "ETH", "label": "ETH"},
+        {"value": "BTC", "label": "BTC"},
+        {"value": "SOL", "label": "SOL"}]
+    } ,
+    "min": "",
+    "max": ""
+  },
+  "attributes-filter": [
+    {
+      "placeholder": "Alignment",
+      "options": [
+        {"label": "A", "value": "A"},
+        {"label": "D", "value": "D"},
+        {"label": "k", "value": "k"},
+        {"label": "s", "value": "s"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Allegiance",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Bandana",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Birthplace",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Boots",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Drop Type",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Eyebrows",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Eyes",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Facial Hair",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Hair Color",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    },
+    {
+      "placeholder": "Hands",
+      "options": [
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"},
+        {"label": "a", "value": "b"}
+      ],
+      "value": []
+    }
+  ]
+
+}

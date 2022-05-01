@@ -1,0 +1,214 @@
+@import "../../../scss/color";
+
+.item-detail {
+  padding: 142px 0 20px 0;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding: 90px 0 20px 0;
+  }
+
+  &-one {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
+    &-left {
+      width: 40%;
+      margin-right: 20px;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    &-right {
+      width: 60%;
+      margin-left: 20px;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        margin: 0;
+      }
+
+      &-title {
+        margin-bottom: 25px;
+
+
+        h4 {
+          @media screen and (max-width: 375px) {
+            font-size: 20px;
+          }
+        }
+
+        &-share {
+          color: $brand-color;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          font-size: 13px;
+          cursor: pointer;
+
+          @media screen and (max-width: 375px) {
+            font-size: 10px;
+          }
+
+          & div:last-child {
+            min-width: 90px;
+
+            span {
+              margin: 0 12px 0 4px;
+            }
+
+            img {
+              width: 16px;
+              cursor: pointer;
+              margin-right: 2px;
+            }
+          }
+
+          &-networks {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            border: 1px solid #252525;
+            padding: 10px 25px 10px 10px;
+            background-color: $black;
+            color: $white;
+            z-index: 15;
+
+
+            div {
+              margin: 10px 0;
+
+              &:hover {
+                color: $brand-color;
+                transition: 0.3s ease;
+              }
+
+              img {
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+
+
+      }
+
+      &-buying {
+        background-color: $brand-fifth;
+        padding: 24px;
+        border: 1px solid #252525;
+
+        @media screen and (max-width: 375px) {
+          padding: 16px;
+        }
+
+        > span {
+          font-size: 8px;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: $brand-color;
+        }
+
+        &-price {
+          margin-top: 9px;
+
+          img {
+            margin-bottom: 15px;
+          }
+
+          &-eth {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 8px;
+          }
+
+          &-USD {
+            font-weight: 400;
+            font-size: 13px;
+            color: $text-second;
+          }
+        }
+
+        &-buttons {
+          display: flex;
+          width: 100%;
+          margin: 24px 0;
+
+          > div {
+            width: 100%;
+          }
+
+          button {
+            width: 100%;
+          }
+
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          color: $text-second;
+          margin: 0;
+
+          @media screen and (max-width: 375px) {
+            font-size: 8px;
+          }
+
+          a {
+            color: $white;
+          }
+        }
+
+        .sell-block {
+          >span {
+            padding: 6px 12px;
+            background: #ad322f5c;;
+            color: #AD322F;
+            font-size: 10px;
+            font-weight: 400;
+          }
+
+          > div {
+            display: flex;
+            width: 100%;
+            margin: 12px 0 16px 0;
+            @media screen and(max-width: 425px) {
+              flex-direction: column;
+
+              div:first-child {
+                width: 100% !important;
+                margin: 0 0 10px 0;
+              }
+              div:last-child {
+                width: 100% !important;
+              }
+            }
+
+            div:first-child {
+              width: 57%;
+              margin-right: 12px;
+            }
+
+            div:last-child {
+              width: 45%;
+
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

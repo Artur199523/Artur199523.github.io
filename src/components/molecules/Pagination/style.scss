@@ -1,0 +1,47 @@
+@import "src/scss/color";
+
+.pagination-block {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+
+.kompete-pagination {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: $brand-fourth;
+    cursor: pointer;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: block;
+    }
+
+    @media screen and (max-width: 426px) {
+      width: 30px;
+      height: 30px;
+      font-size: 8px;
+      margin: 2px;
+    }
+
+    &.active {
+      background-color: $brand-color;
+      color: $brand-fourth
+    }
+
+    &:hover:not(.active) {
+      background-color: $brand-color;
+    }
+  }
+}

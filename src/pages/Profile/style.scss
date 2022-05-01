@@ -1,0 +1,164 @@
+@import "src/scss/color";
+
+.profile {
+  padding-top: 116px;
+
+
+  &-main {
+    padding: 36px;
+    max-width: 890px;
+    margin: auto;
+    background-color: $brand-fifth;
+
+    @media screen and (max-width: 425px) {
+      padding: 32px 5px;
+    }
+
+    &_avatar_block {
+      text-align: center;
+      padding: 5px 0;
+
+      &_img {
+        margin: 5px auto 40px;
+        width: 235px;
+        height: 235px;
+        border-radius: 50%;
+        border: 1px solid $brand-color;
+        position: relative;
+
+        @media screen and (max-width: 425px) {
+          width: 144px;
+          height: 144px;
+          margin-bottom: 16px;
+        }
+
+        span {
+          position: absolute;
+          width: 40px;
+          top: 161px;
+          right: 5px;
+
+          @media screen and (max-width: 425px) {
+            width: 32px;
+            top: 89px;
+            left: 114px
+          }
+        }
+      }
+
+      &_name {
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 700;
+
+        @media screen and (max-width: 425px) {
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+
+      &_address {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 16px 0;
+        @media screen and (max-width: 425px) {
+          margin: 0;
+        }
+
+        button {
+          padding: 16px 48px;
+          border-radius: 1px;
+          border: none;
+          outline: none;
+          background-color: #121212;
+          color: $text-fifth;
+          width: 250px;
+          margin: auto;
+
+          @media screen and (max-width: 425px) {
+            padding: 16px 48px;
+          }
+        }
+
+        &_nickName {
+          font-size: 20px;
+          color: $brand-color;
+          margin-right: 16px;
+          padding: 13px 0;
+
+          @media screen and (max-width: 425px) {
+            font-size: 18px;
+            margin: 0;
+            padding: 0 0 16px 0;
+          }
+        }
+      }
+
+      &_edit {
+        margin-top: 32px;
+
+        button {
+          text-transform: lowercase !important;
+          font-size: 16px;
+          font-weight: 300;
+
+          @media screen and (max-width: 425px) {
+            span {
+              padding: 0 22px !important;
+            }
+          }
+          img {
+            margin-right: 12px
+          }
+        }
+      }
+    }
+  }
+
+  &-nft {
+    margin-top: 114px;
+
+    @media screen and (max-width: 425px) {
+      margin-top: 40px;
+    }
+
+    &_tab {
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      > div {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 800;
+        color: $white;
+        padding: 10px 20px;
+      }
+
+      .active {
+        color: $brand-color !important;
+        border-bottom: 2px solid $brand-color;
+      }
+    }
+
+    &_content {
+      .display-grid {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 48px 0 56px 0;
+      }
+
+      &_noResult {
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        align-items: center;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+

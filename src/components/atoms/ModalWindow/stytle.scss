@@ -1,0 +1,80 @@
+@import "src/scss/color";
+
+@keyframes showOpacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.modal-container {
+  position: fixed;
+  background-color: #00000091;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  overflow-y: auto;
+  padding: 20px;
+
+  .modal-window {
+    background-color: $brand-fifth;
+    z-index: 9999999;
+    position: relative;
+    animation: showOpacity 0.2s ease forwards;
+
+    .close-icon {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      cursor: pointer;
+      z-index: 999;
+
+      @media screen and (max-width: 425px) {
+        top: 5px;
+        right: 5px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.window-lg_margin {
+  display: block;
+
+  > div {
+    max-width: 890px;
+    width: 890px;
+    margin: 82px auto 0
+  }
+}
+
+.window-lg_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    max-width: 890px;
+    width: 890px;
+  }
+}
+
+.window-sm {
+  max-width: 490px;
+  width: 490px;
+  margin: 250px auto 0;
+
+  @media screen and (max-width: 550px) {
+    margin-top: 121px;
+  }
+}
+
+.window-xs {
+  max-width: 400px;
+  margin: 270px auto 0;
+}
+

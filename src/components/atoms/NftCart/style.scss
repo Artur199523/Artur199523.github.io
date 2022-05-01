@@ -1,0 +1,74 @@
+@import "src/scss/color";
+
+.nft-cart {
+  width: 100%;
+  clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+
+  .nft-content {
+    padding: 23px 16px 0 16px;
+    background-color: $brand-fifth;
+    border-bottom: 2px solid $brand-sixth;
+    border-left: 2px solid $brand-sixth;
+    border-right: 2px solid $brand-sixth;
+
+    &-limited {
+      font-size: 10px;
+      font-weight: 400;
+      color: $brand-color;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+
+      @media screen and (max-width: 425px) {
+        font-size: 8px !important;
+      }
+    }
+
+    &-title {
+      font-size: 16px;
+      color: white;
+      margin: 0;
+      @media screen and (max-width: 425px) {
+        font-size: 12px
+      }
+    }
+
+    &-price {
+      margin: 16px 0;
+
+      img {
+        margin-right: 8px;
+      }
+
+      span {
+        padding-top: 10px;
+        font-size: 15px;
+        @media screen and (max-width: 425px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    > div:first-child {
+      img {
+        margin-right: 8px;
+      }
+
+      margin-top: 16px;
+    }
+  }
+
+  .nft-cart_btn {
+    padding: 16px 0;
+    border-top: 1px solid $brand-sixth;
+
+    button {
+      width: 100%;
+padding: 2px 0;
+      @media screen and (max-width: 425px) {
+        font-size: 8px;
+        padding: 0 12px;
+        line-height: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,380 @@
+@import "src/scss/color";
+
+
+.step-one-block {
+  padding: 80px 65px 110px;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  .wallet-block {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
+
+    .wallet-cart {
+      display: flex;
+      justify-content: space-between;
+      outline: none;
+      border: none;
+      background-color: $brand-seventh;
+      padding: 14px 20px;
+      margin: 6px 0;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $border-color;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 10px;
+      }
+
+      div:first-child {
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+          img {
+            width: 32px;
+          }
+        }
+
+        .wallet-cart_title {
+          margin: 15px 0;
+
+          @media screen and (max-width: 768px) {
+            margin: 5px 0;
+          }
+
+          span:first-child {
+            font-weight: 700;
+            margin: 0 8px 0 13px;
+            color: white;
+            font-size: 18px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 12px;
+              margin: 0 8px 0 8px;
+            }
+          }
+
+          &_status {
+            color: $white;
+            opacity: 0.5;
+            font-size: 18px;
+            @media screen and (max-width: 768px) {
+              font-size: 7px;
+            }
+          }
+        }
+      }
+
+      &_info {
+        font-size: 14px;
+        color: $white;
+        opacity: 0.5;
+        margin: 16px 0;
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+          margin: 8px 0;
+        }
+
+        p {
+          margin: 4px 8px 0 0;
+          @media screen and (max-width: 768px) {
+            font-size: 8px;
+          }
+        }
+
+        div {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 1px solid;
+        }
+      }
+
+
+    }
+  }
+
+  &_progress-block {
+ display: flex;
+    justify-content: center;
+    &_text {
+      font-size: 14px;
+      font-weight: 300;
+      color: $text-second;
+      padding-top: 50px;
+    }
+  }
+}
+
+.step-two-block {
+  @extend .step-padding;
+
+  &_title {
+    @extend .step-title
+  }
+
+  &_underTitle {
+    @extend .step-underTitle
+  }
+
+  &_fields {
+    @extend .step-fields;
+  }
+
+  &_checkbox {
+    div:last-child {
+      margin-top: 24px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 12px;
+      }
+    }
+
+    div {
+      label {
+        color: #B5B5B5;
+      }
+    }
+  }
+
+  &_btn-block {
+    @extend .step-btn
+  }
+}
+
+.step-three-block {
+  @extend .step-padding;
+
+  &_title {
+    @extend .step-title
+  }
+
+  &_underTitle {
+    margin: auto !important;
+    @extend .step-underTitle;
+    max-width: 551px;
+    font-weight: 300;
+  }
+
+  &_fields {
+    @extend .step-fields
+  }
+
+  &_btn-block {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+    }
+     div{
+      @media screen and (max-width: 600px) {
+        margin: 8px 0;
+      }
+
+      button {
+        @media screen and (max-width: 600px) {
+          clip-path: polygon(2% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%) !important;
+          width: 100%;
+          font-size: 10px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}
+
+.step-four-block {
+  @extend .step-padding;
+
+  &_title {
+    @extend .step-title
+  }
+
+  &_underTitle {
+    @extend .step-underTitle;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &_fields {
+    border-bottom: 1px solid $brand-sixth;
+    @extend .step-fields;
+
+    > div:last-child {
+      position: relative;
+    }
+
+    &_forgot-password {
+      color: $brand-color;
+      cursor: pointer;
+      transition: 0.3s ease;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 14px;
+
+      &:hover {
+        color: $white;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 8px;
+        top: 10px;
+      }
+    }
+  }
+
+  &_btn-block {
+
+    @media screen and (max-width: 768px) {
+      margin: 8px 0 16px;
+    }
+
+    button {
+      @extend .btn-polygon;
+
+      @media screen and (max-width: 425px) {
+        font-size: 10px;
+        line-height: 38px;
+      }
+    }
+  }
+
+  &_wallet-btn-block {
+    &_text {
+      font-size: 16px;
+      margin: 40px 0 24px 0;
+      text-align: center;
+      color: $text-sixth;
+
+      @media screen and (max-width: 768px) {
+        margin: 8px 0 17px 0;
+        font-size: 10px;
+      }
+    }
+
+    button {
+      @extend .btn-polygon;
+
+      @media screen and (max-width: 425px) {
+        font-size: 10px;
+        line-height: 38px;
+      }
+    }
+
+    span {
+      @extend .btn-polygon
+    }
+  }
+}
+
+.step-five-block {
+  @extend .step-padding;
+
+  &_title {
+    @extend .step-title
+  }
+
+  &_fileds {
+    @extend .step-fields;
+  }
+
+  &_btn-block {
+    @extend .step-btn
+  }
+
+}
+
+.step-padding {
+  padding: 64px 64px 50px;
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px 30px;
+  }
+}
+
+.step-title {
+  font-size: 56px;
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+
+.step-underTitle {
+  font-size: 20px;
+  color: $text-sixth;
+  text-align: center;
+  margin: 24px 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    margin: 12px 0
+  }
+}
+
+.step-fields {
+  padding: 32px 0 24px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 0 0 0;
+    border-bottom: none;
+  }
+
+  .inp-black {
+    margin: 16px 0 32px 0;
+    @media screen and (max-width: 768px) {
+      margin: 8px 0 16px;
+    }
+  }
+}
+
+.step-btn {
+  text-align: center;
+  margin-top: 45px;
+
+  button {
+    @media screen and (max-width: 425px) {
+      font-size: 10px;
+      line-height: 38px;
+    }
+  }
+}
+
+.btn-polygon {
+  width: 100%;
+  clip-path: polygon(2% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%) !important;
+  @media screen and (max-width: 768px) {
+    clip-path: polygon(4% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%) !important;
+  }
+  @media screen and (max-width: 375px) {
+    clip-path: polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%) !important;
+  }
+}

@@ -1,0 +1,158 @@
+@import "src/scss/color";
+
+.menu-mobile {
+
+  &_header {
+    height: 80px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 425px){
+      padding: 0 24px;
+    }
+    &_logo {
+      width: 150px;
+      padding: 27px 0;
+
+      @media screen and (max-width: 425px){
+        width: 95px;
+        padding: 30px 0;
+      }
+    }
+
+    &_btn-close{
+      padding: 26px 0 26px 3px;
+      cursor: pointer;
+    }
+  }
+
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  overflow: auto;
+  right: 0;
+  background-color: #000;
+  transition: all ease 0.3s;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  &.open {
+    opacity: 1;
+    z-index: 105;
+    visibility: visible;
+    margin-top: 0;
+    backdrop-filter: blur(5px);
+    background: rgb(0 0 0 / 20%);
+
+    @-moz-document url-prefix() {
+      opacity: 1;
+      z-index: 105;
+      visibility: visible;
+      margin-top: 0;
+      backdrop-filter: blur(5px);
+      background: rgb(0 0 0 / 70%);
+    }
+  }
+
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      padding: 0px;
+      list-style: none;
+
+      li {
+        margin: 0px 0px 13px 0px;
+
+        a {
+          display: block;
+          font-size: 24px;
+          padding: 13px 0;
+          transition: all ease 0.3s;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 400;
+          text-align: center;
+
+          &:hover {
+            color: $brand-color;
+          }
+
+        }
+      }
+    }
+  }
+
+  .social {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(315.38deg, #865716 32.22%, #b38a3b 79.86%);
+      margin: 0px 10px;
+      clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+      transition: all ease 0.3s;
+
+      &:hover {
+        background: linear-gradient(315.38deg, #b38a3b 32.22%, #b38a3b 79.86%);
+      }
+
+      span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px;
+      }
+
+      &.telegram {
+        span {
+          background-image: url(../../../../assets/svg/telegram.svg);
+        }
+      }
+
+      &.twitter {
+        span {
+          background-image: url(../../../../assets/svg/twitter.svg);
+        }
+      }
+
+      &.facebook {
+        span {
+          background-image: url(../../../../assets/svg/facebook.svg);
+        }
+      }
+
+      &.youtube {
+        span {
+          background-image: url(../../../../assets/svg/youtube.svg);
+        }
+      }
+
+      &.tictok {
+        span {
+          background-image: url(../../../../assets/svg/tictok.svg);
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .social {
+      margin-top: auto;
+      padding: 76px 0 56px 0;
+    }
+  }
+}

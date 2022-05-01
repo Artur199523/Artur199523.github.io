@@ -1,0 +1,160 @@
+@import "src/scss/color";
+
+.easySlider{
+  position: relative;
+  height: 100%;
+  margin:0 10px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  flex-direction: column-reverse;
+  text-align: center;
+  margin: 0 0 40px 0;
+
+  .des {
+
+    max-width: 485px;
+
+    width: 100%;
+
+    strong {
+      display: block;
+      font-weight: 800;
+      color: #ba8926;
+      font-size: 36px;
+      margin: 0 0 5px 0;
+    }
+
+    h3 {
+      color: #fff;
+      font-weight: 800;
+
+
+      text-transform: uppercase;
+      position: relative;
+
+      font-size: 16px;
+      margin: 10px 0 10px 0;
+      text-align: center;
+    }
+    p {
+
+      font-weight: 300;
+      margin: 0 0 20px 0;
+      color:white;
+      font-size: 14px;
+      text-align: center;
+      padding: 0 8%;
+    }
+  }
+  .thumb {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+
+    .inner {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  &.items-fix {
+
+    flex-direction: column-reverse;
+
+    .thumb {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+.swiper{
+  .swiper-pagination-bullet {
+    padding: 4px;
+    background: none;
+    opacity: 1;
+    width: unset;
+    height: unset;
+
+    &:before {
+      content: '';
+      border-radius: 50%;
+      background-color: #fff;
+      display: block;
+      transition: .3s;
+      width: 4.5px;
+      height: 4.5px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      &:before {
+        transform: scale(2);
+        background-color: #865716;
+      }
+    }
+  }
+}
+.token-four-mobile{
+  .easySlider {
+    img {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin:20px 0 24px 0;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $brand-color;
+        transition: all ease 0.3s;
+        transform: skewX(-45deg);
+        left: 50%;
+        margin-left: -22px;
+        width: 44px;
+        height: 2px;
+        bottom: -8px;
+      }
+    }
+    p{
+      max-width: 300px  ;
+    }
+  }
+}

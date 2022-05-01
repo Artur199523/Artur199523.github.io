@@ -1,0 +1,134 @@
+@import "src/scss/color";
+@import "src/scss/mixin";
+
+.marketplace-container {
+  padding-top: 150px;
+
+  .mk-nft-container {
+    .mk-nft {
+      display: flex;
+
+      &-filtered {
+        padding: 32px 30px;
+        max-width: 100%;
+        width: 100%;
+
+      }
+
+      &-search-bar {
+        display: flex;
+        align-items: center;
+        width: inherit;
+
+        @media screen and(max-width: 768px) {
+          flex-direction: column;
+        }
+
+        &-refresh {
+          min-width: 20px;
+          margin-right: 20px !important;
+          cursor: pointer;
+
+          @media screen and(max-width: 768px) {
+            display: none;
+          }
+        }
+
+        &-input {
+          width: 100%;
+        }
+
+        &-select {
+          min-width: 220px;
+          @media screen and(max-width: 768px) {
+            width: 100%;
+            margin: 10px 0 !important;
+          }
+        }
+
+        &-group {
+
+          @media screen and(max-width: 768px) {
+            display: none;
+          }
+
+          &-items {
+            display: flex;
+            width: 80px;
+            height: 46px;
+            border: 1px solid #252525;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            div {
+              margin: 0 5px;
+            }
+
+
+          }
+        }
+
+        > div {
+          margin: 0 4px;
+        }
+      }
+
+      &-items {
+        display: grid;
+        gap: 1rem;
+        padding: 16px 0;
+
+        @media screen and (max-width: 600px) {
+          @include grid-display(3)
+        }
+        @media screen and (max-width: 470px) {
+          @include grid-display(2)
+        }
+      }
+    }
+
+    .mk-nft-transactions {
+      padding: 60px 34px;
+    }
+  }
+
+  .group2 {
+    @media screen and (min-width: 1440px) {
+      @include grid-display(8)
+    }
+    @media screen and (max-width: 1440px) {
+      @include grid-display(6)
+    }
+    @media screen and (max-width: 1200px) {
+      @include grid-display(5)
+    }
+    @media screen and (max-width: 1024px) {
+      @include grid-display(4)
+    }
+    @media screen and (max-width: 900px) {
+      @include grid-display(3)
+    }
+    @media screen and (max-width: 768px) {
+      @include grid-display(4)
+    }
+    @media screen and (max-width: 768px) {
+      @include grid-display(4)
+    }
+  }
+
+  .group1 {
+    @media screen and (min-width: 1440px) {
+      @include grid-display(6)
+    }
+    @media screen and (max-width: 1440px) {
+      @include grid-display(4)
+    }
+    @media screen and (max-width: 1024px) {
+      @include grid-display(3)
+    }
+    @media screen and (max-width: 768px) {
+      @include grid-display(4)
+    }
+  }
+}

@@ -1,0 +1,233 @@
+@import "../../../scss/color";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all ease 0.3s;
+  min-height: 80px;
+  max-width: 2000px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, .8);;
+  @media screen and (max-width: 991px) {
+    min-height: 55px;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @media screen and (max-width: 991px) {
+      justify-content: space-between;
+      min-height: 55px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+
+      img {
+        height: 100px;
+        display: block;
+      }
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    .logo-mobile {
+      display: none;
+      @media screen and (max-width: 991px) {
+        display: block;
+        img {
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    max-width: 1440px;
+    height: 80px;
+    padding: 0 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 425px){
+      padding: 0 24px;
+    }
+
+    &_logo {
+      padding: 24px 0;
+
+      @media screen and (max-width: 1140px) {
+        width: 150px;
+        padding: 27px 0;
+      }
+
+      @media screen and (max-width: 425px){
+        width: 95px;
+        padding: 30px 0;
+      }
+    }
+
+    &_pages {
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+
+      > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        > li {
+          display: inline-block;
+          position: relative;
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            height: 4px;
+            background-color: $brand-color;
+            transition: all ease 0.3s;
+            transform: skewX(-15deg);
+          }
+
+          > a {
+            display: block;
+            line-height: 80px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all ease 0.3s;
+            align-items: center;
+            position: relative;
+            text-transform: uppercase;
+            padding: 0 23px;
+
+            @media screen and (max-width: 1140px) {
+              font-size: 12px;
+              padding: 0 18px;
+            }
+          }
+
+          &:hover {
+            a {
+              color: $brand-color;
+            }
+
+            &:before {
+              left: 0;
+              right: 0;
+            }
+          }
+
+          &.active {
+            a {
+              color: $brand-color;
+            }
+
+            &:before {
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &_btn {
+      padding: 22px 0;
+      display: flex;
+
+      button {
+        line-height: 32px;
+        font-size: 9px;
+        margin-right: 10px;
+
+        @media screen and (max-width: 425px){
+          padding: 2px 30px;
+        }
+      }
+
+      &-mobile {
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+        display: none;
+        padding: 0 0 0 0;
+        z-index: 999999;
+        margin: 8px 0 0 0;
+
+        span {
+          height: 1px;
+          display: block;
+          background-color: $brand-color;
+          width: 100%;
+          margin: 0 0 7px 0;
+          transition: all ease 0.3s;
+          position: relative;
+
+          &:last-child {
+            width: 13px;
+            margin: 0;
+            float: right;
+          }
+        }
+
+        &.open {
+          span {
+            background-color: $black !important;
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(1) {
+              opacity: 1;
+              transform: rotate(45deg);
+              top: 7px;
+            }
+
+            &:nth-child(3) {
+              opacity: 1;
+              transform: rotate(-45deg);
+              width: 100%;
+              top: -9px;
+            }
+          }
+        }
+
+        @media screen and (max-width: 991px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.mobile-container {
+  display: flex;
+  align-items: center;
+
+  .mobile-connect {
+    margin-right: 24px;
+    display: none;
+    @media screen and(max-width: 991px) {
+      display: block;
+    }
+  }
+}

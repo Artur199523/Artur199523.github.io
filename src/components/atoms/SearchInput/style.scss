@@ -1,0 +1,48 @@
+@import "./src/scss/color";
+
+.search-input {
+  width: 100%;
+  position: relative;
+
+  input {
+    outline: none;
+    border: none;
+    padding: 14px 36px 14px 14px;
+    font-size: 12px;
+  }
+
+  &.white-search {
+    background: white;
+    border: 1px solid #000000;
+
+    input {
+      border: 1px solid #000000;
+      background-color: white;
+      font-size: 12px;
+      &:focus{
+        border: 1px solid $brand-color;
+      }
+    }
+
+  }
+
+  &.black-search {
+    background: black;
+
+
+    input {
+      color: white;
+      background-color: black;
+      border: 1px solid #252525;
+      width: 100%;
+    }
+  }
+
+  &-svg{
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding: 16px;
+    top: 0;
+  }
+}

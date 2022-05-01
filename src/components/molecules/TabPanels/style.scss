@@ -1,0 +1,45 @@
+@import "src/scss/color";
+
+  .tab-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    > div {
+      padding: 15px 25px;
+      text-align: center;
+      display: flex;
+      cursor: pointer;
+      position: relative;
+
+      @media screen and (max-width: 450px) {
+        padding: 15px 7px
+      }
+
+      &.active {
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background-color: $brand-color;
+          transition: all ease 0.3s;
+          transform: skewX(-15deg);
+        }
+      }
+
+      img {
+        margin-right: 8px;
+        padding-bottom: 2px;
+
+        @media screen and (max-width: 450px) {
+          margin-right: 2px;
+        }
+      }
+    }
+  }

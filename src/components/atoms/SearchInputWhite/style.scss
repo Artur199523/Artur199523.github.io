@@ -1,0 +1,37 @@
+@import "src/scss/color";
+
+.search-help {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 25px 24px;
+  clip-path: polygon(1% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%);
+
+  @media screen and (max-width: 768px) {
+    clip-path: polygon(2% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 20%);
+    padding: 17px 16px;
+  }
+
+  &-inp {
+    width: 100%;
+
+    input {
+      width: inherit;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      margin-left: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+   div:last-child{
+     cursor: pointer;
+   }
+
+}

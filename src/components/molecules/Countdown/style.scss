@@ -1,0 +1,53 @@
+@import "src/scss/color";
+
+.countdown {
+  display: flex;
+  color: #212121;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .date {
+    font-size: 12px;
+    font-weight: bold;
+    color: #212121;
+    text-transform: uppercase;
+    line-height: 12px;
+  }
+
+  .numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  .divider {
+      font-size: 32px;
+      font-weight: bold;
+      color: $brand-lightRed;
+      margin-bottom: 12px;
+    }
+
+    .num-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+      width: 50px;
+
+      .num {
+        font-size: 32px;
+        font-weight: bold;
+        color: $brand-lightRed;
+        line-height: 36px;
+      }
+
+      .num-label {
+        font-size: 12px;
+        font-weight: bold;
+        color: #212121;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
